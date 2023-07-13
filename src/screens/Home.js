@@ -1,8 +1,9 @@
 import { Text, StyleSheet, View, Image } from "react-native";
+import Menu from "./Component/Menu"
 
 export default Home = (props) => {
   const description =
-    "In the vibrant realm of imagination, where dreams intertwine with reality, lies a picturesque landscape bathed in hues unseen. Majestic mountains rise to touch the heavens, their snowy peaks glistening under the ethereal light of a thousand stars. Cascading waterfalls whisper enchanting melodies, their crystalline waters weaving tales of forgotten lore.";
+    "In the vibrant realm of imagination.";
   return (
     <View style={styles.mainContainer}>
       <View style={styles.homeTop}></View>
@@ -25,6 +26,11 @@ export default Home = (props) => {
         {props.channelName}
       </Text>
       <Text style={styles.paraStyle}>{description}</Text>
+      <View style={styles.menuStyle}>
+      <View style={styles.lineStyle}></View>
+      <Menu/>
+      <View style={[styles.lineStyle,{marginVertical:20,}]}></View>
+      </View>
     </View>
   );
 };
@@ -66,4 +72,10 @@ const styles = StyleSheet.create({
     paddingBottom: 50,
     lineHeight: 26,
   },
+
+  lineStyle:{
+   marginBottom:20,
+   borderWidth:0.5,
+   borderColor:'grey'
+  }
 });
