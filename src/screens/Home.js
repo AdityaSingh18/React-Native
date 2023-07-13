@@ -29,7 +29,7 @@ export default Home = (props) => {
       <View style={styles.menuStyle}>
       <View style={styles.lineStyle}></View>
       <Menu/>
-      <View style={[styles.lineStyle,{marginVertical:20,}]}></View>
+      <View style={[styles.lineStyle,{marginVertical:10,}]}></View>
       </View>
     </View>
   );
@@ -74,7 +74,7 @@ const styles = StyleSheet.create({
   },
 
   lineStyle:{
-   marginBottom:20,
+   marginBottom:10,
    borderWidth:0.5,
    borderColor:'grey'
   }
